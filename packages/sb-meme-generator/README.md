@@ -66,7 +66,7 @@ Read more about field plugins [on GitHub](https://github.com/storyblok/field-plu
 Set up continuous integration with the [CLI](https://www.npmjs.com/package/@storyblok/field-plugin-cli). Define an environmental variable `STORYBLOK_PERSONAL_ACCESS_TOKEN`, and use the `--name` and `--skipPrompts` options as such:
 
 ```shell
-yarn deploy --name $NAME --skipPrompts
+yarn  deploy --name $NAME --skipPrompts
 ```
 
 [@storyblok/design-system](https://www.npmjs.com/package/@storyblok/design-system) is Storyblok's component library for Vue. To add it to this project, follow the instructions in the [readme](https://www.npmjs.com/package/@storyblok/design-system).
