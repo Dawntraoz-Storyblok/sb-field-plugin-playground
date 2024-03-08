@@ -14,5 +14,7 @@ jobs:
           cache: 'yarn'
       - name: Install
         run: yarn install
-      - name: Build
-        run: yarn workspaces foreach --since run build
+      - name: Build and Deploy
+        env:
+          STORYBLOK_PERSONAL_ACCESS_TOKEN: ${{secrets.STORYBLOK_PERSONAL_ACCESS_TOKEN}}
+        run: yarn workspaces foreach -A run deploy --skipPrompts --scope my-plugins
