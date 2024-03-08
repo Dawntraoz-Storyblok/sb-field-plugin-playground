@@ -27,6 +27,6 @@ const plugin = useFieldPlugin({
 
 <template>
   <pre>
-    {{ JSON.stringify(plugin, null, 2) }} YouTube Embed
+    {{ JSON.stringify(plugin, null, 2) }} YouTube Embed uy
   </pre>
 </template>
