@@ -12,8 +12,6 @@ jobs:
         with:
           node-version: 20
           cache: 'yarn'
-      - name: Add monorepo yarn tools
-        run: yarn plugin import workspace-tools
       - name: Install
         run: yarn install
       - name: Build
