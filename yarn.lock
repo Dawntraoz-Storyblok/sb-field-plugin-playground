@@ -418,6 +418,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.11.8":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: e5c69fdebf52a4012f6a1f14817ca8e9599cb1be73dd1387e1785e2ed5e5f0862ff817f420a87c7fc532add1f88a12e25aeb010ffcbdc98eace3d55ce2139cf0
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.12.1":
   version: 4.12.1
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.12.1"
@@ -516,10 +523,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storyblok/field-plugin@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@storyblok/field-plugin@npm:1.1.1"
-  checksum: 1a39808a8da7111e00522fdc013923346e8bb3f4668c1cc6e34016569ea92939c95b958cd7d11c801bc486be7056005fa9949aa32d267c21456bfd87a28f14ae
+"@storyblok/design-system@npm:^3.25.0":
+  version: 3.25.0
+  resolution: "@storyblok/design-system@npm:3.25.0"
+  dependencies:
+    "@popperjs/core": ^2.11.8
+    "@vueuse/core": ^10.7.2
+    click-outside-vue3: ^4.0.1
+    dayjs: ^1.11.10
+    dompurify: ^3.0.6
+    lucide-vue-next: ^0.279.0
+    maska: ^1.5.2
+    primevue: ^3.43.0
+    throttle-debounce: ^5.0.0
+  checksum: cf62bfd3fa53e9f829c324ae9a509b1815070c020064914d197164322fd130d51a33388fc53e265b390c195380c0aa7a731df52767569b3b5aaf7114c36bf415
+  languageName: node
+  linkType: hard
+
+"@storyblok/field-plugin@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@storyblok/field-plugin@npm:1.1.2"
+  checksum: 8139cfd60c0bea31ba217d33349d9f9ab92f716fb441937f6fa9c99d78cbad1ed9d25280ad4333594cd5c56460526544cbd33477dea68fa5463910df9dc9550e
   languageName: node
   linkType: hard
 
@@ -632,6 +656,13 @@ __metadata:
   version: 7.5.8
   resolution: "@types/semver@npm:7.5.8"
   checksum: ea6f5276f5b84c55921785a3a27a3cd37afee0111dfe2bcb3e03c31819c197c782598f17f0b150a69d453c9584cd14c4c4d7b9a55d2c5e6cacd4d66fdb3b3663
+  languageName: node
+  linkType: hard
+
+"@types/web-bluetooth@npm:^0.0.20":
+  version: 0.0.20
+  resolution: "@types/web-bluetooth@npm:0.0.20"
+  checksum: d6d61da683e876e8995ac57e2e5229d829d0f536deb3568d4430898fc626ebcb7e065fe7f655ac6a5205702f7f7049e6335abe689cd5291241eef6e39e8a4371
   languageName: node
   linkType: hard
 
@@ -1008,6 +1039,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:^10.7.2":
+  version: 10.9.0
+  resolution: "@vueuse/core@npm:10.9.0"
+  dependencies:
+    "@types/web-bluetooth": ^0.0.20
+    "@vueuse/metadata": 10.9.0
+    "@vueuse/shared": 10.9.0
+    vue-demi: ">=0.14.7"
+  checksum: 6d26660e4e88e2e6b34f84cb832d919d296a198e6c7f8ef93fb5d0442b53ba3872c617c1144190328992b44dde33a8e249b3182ac35128d460a457488a6df940
+  languageName: node
+  linkType: hard
+
+"@vueuse/metadata@npm:10.9.0":
+  version: 10.9.0
+  resolution: "@vueuse/metadata@npm:10.9.0"
+  checksum: e381d3134e1a5965e157503ddb1187f671316386ab0c779d3fc1b9c91d6658086c417414f4642554382ac43fd800d7565f5f25824b678433f937a917e931387e
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:10.9.0":
+  version: 10.9.0
+  resolution: "@vueuse/shared@npm:10.9.0"
+  dependencies:
+    vue-demi: ">=0.14.7"
+  checksum: e6fc1e04aa63ead37694b5543cacd8c1b55ade5ce7416699302a4db5e5c3c083b7ecda9156445e07a477eb86664740d368a03584b55859dbe0cf0abbec3e21ab
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -1333,6 +1392,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"click-outside-vue3@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "click-outside-vue3@npm:4.0.1"
+  checksum: bc2cf3336f1343619f60c2e2d5a8cc7cc64ec5d912f42f9f3666c7655c08d77b9a8916a6b98ac505deeb2c11a40ffd58ce91308762e31989e546654b689d0b1e
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^1.9.0":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
@@ -1446,6 +1512,13 @@ __metadata:
     whatwg-mimetype: ^4.0.0
     whatwg-url: ^14.0.0
   checksum: 5c40568c31b02641a70204ff233bc4e42d33717485d074244a98661e5f2a1e80e38fe05a5755dfaf2ee549f2ab509d6a3af2a85f4b2ad2c984e5d176695eaf46
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.11.10":
+  version: 1.11.10
+  resolution: "dayjs@npm:1.11.10"
+  checksum: a6b5a3813b8884f5cd557e2e6b7fa569f4c5d0c97aca9558e38534af4f2d60daafd3ff8c2000fed3435cfcec9e805bcebd99f90130c6d1c5ef524084ced588c4
   languageName: node
   linkType: hard
 
@@ -1589,6 +1662,13 @@ __metadata:
   version: 0.6.3
   resolution: "dom-accessibility-api@npm:0.6.3"
   checksum: c325b5144bb406df23f4affecffc117dbaec9af03daad9ee6b510c5be647b14d28ef0a4ea5ca06d696d8ab40bb777e5fed98b985976fdef9d8790178fa1d573f
+  languageName: node
+  linkType: hard
+
+"dompurify@npm:^3.0.6":
+  version: 3.0.9
+  resolution: "dompurify@npm:3.0.9"
+  checksum: 09794f2e40a0003d36e3cd70be1036f83de39d9d4a0f199c45e0b9962ce8ae5f9fe424d7edc4c8ff9ec615be9744a140d66788f0925913ac482d4628b283cae5
   languageName: node
   linkType: hard
 
@@ -2873,6 +2953,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lite-youtube-embed@npm:^0.3.2":
+  version: 0.3.2
+  resolution: "lite-youtube-embed@npm:0.3.2"
+  checksum: 0745f0d120fa9832b60a7d4ad558afe9f5d647a985b35dfb1a8ead0aef8dbcf5b93d313c7ef77047aff1d0f42747e67490ccbb30a7e7895a4648cf0c70e50f97
+  languageName: node
+  linkType: hard
+
 "local-pkg@npm:^0.5.0":
   version: 0.5.0
   resolution: "local-pkg@npm:0.5.0"
@@ -2931,6 +3018,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-vue-next@npm:^0.279.0":
+  version: 0.279.0
+  resolution: "lucide-vue-next@npm:0.279.0"
+  peerDependencies:
+    vue: ">=3.0.1"
+  checksum: 1489875df9a0015a18bf968aa50f5200011f34a29d59e3af7786cf5743ddb07707899f8cd07047eb414f9faa8cf48389bbf0c3a5314fe5f5fb11342c9f6d749c
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -2965,6 +3061,13 @@ __metadata:
     promise-retry: ^2.0.1
     ssri: ^10.0.0
   checksum: 7c7a6d381ce919dd83af398b66459a10e2fe8f4504f340d1d090d3fa3d1b0c93750220e1d898114c64467223504bd258612ba83efbc16f31b075cd56de24b4af
+  languageName: node
+  linkType: hard
+
+"maska@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "maska@npm:1.5.2"
+  checksum: e3c7d5ada403ac6a222ed520fe7ebd6bda8065e3c946c272940e1c5e0e46c325a69d4f017ba9562aa5f3a170c6a5a874fd413cd4977d2e3c562bfff6e8c7ccee
   languageName: node
   linkType: hard
 
@@ -3530,6 +3633,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"primevue@npm:^3.43.0":
+  version: 3.50.0
+  resolution: "primevue@npm:3.50.0"
+  peerDependencies:
+    vue: ^3.0.0
+  checksum: c5dcfc3bcde7b6806238004c17365226656bd5ad3ffe994422a7bbdc17a2d74752cc0d4a75e961f74be7858d4ec0cee27f73e8fa32272814f0b05795c65aab8b
+  languageName: node
+  linkType: hard
+
 "proc-log@npm:^3.0.0":
   version: 3.0.0
   resolution: "proc-log@npm:3.0.0"
@@ -3761,7 +3873,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sb-meme-generator@workspace:packages/sb-meme-generator"
   dependencies:
-    "@storyblok/field-plugin": 1.1.1
+    "@storyblok/field-plugin": ^1.1.2
     "@testing-library/jest-dom": 6.4.2
     "@testing-library/user-event": 14.5.2
     "@testing-library/vue": 8.0.2
@@ -3781,13 +3893,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sb-youtube-embed@workspace:packages/sb-youtube-embed"
   dependencies:
-    "@storyblok/field-plugin": 1.1.1
+    "@storyblok/design-system": ^3.25.0
+    "@storyblok/field-plugin": ^1.1.2
     "@testing-library/jest-dom": 6.4.2
     "@testing-library/user-event": 14.5.2
     "@testing-library/vue": 8.0.2
     "@vitejs/plugin-vue": ^4.6.2
     "@vitest/ui": 1.3.0
     jsdom: 23.0.1
+    lite-youtube-embed: ^0.3.2
     typescript: 5.3.3
     vite: ^5.1.3
     vite-plugin-css-injected-by-js: 3.1.0
@@ -4093,6 +4207,13 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: b6937a38c80c7f84d9c11dd75e49d5c44f71d95e810a3250bd1f1797fc7117c57698204adf676b71497acc205d769d65c16ae8fa10afad832ae1322630aef10a
+  languageName: node
+  linkType: hard
+
+"throttle-debounce@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "throttle-debounce@npm:5.0.0"
+  checksum: aa8bf25828b4f8645ce863589de05d6807ea3debc147ce7d89624638ff8a16792d6d0baa0f8a32a260f0b163444d74020c6087b713ae561fde594b97b6e51f28
   languageName: node
   linkType: hard
 
@@ -4405,6 +4526,22 @@ __metadata:
   version: 1.8.27
   resolution: "vue-component-type-helpers@npm:1.8.27"
   checksum: 71245a41a19c9e30af4a46e2a7b3a3caedc28cbafdfb6536b65ff5165347829d83756737d4770018ee92ea90803a5e6a8d42844d380c9de39b7652853fb20543
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:>=0.14.7":
+  version: 0.14.7
+  resolution: "vue-demi@npm:0.14.7"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-rc.1
+    vue: ^3.0.0-0 || ^2.6.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 6819b1cd52355047ae899d7cdfa32f1b00e806e6c67455601d33ab0226f3172c48a5f6c3d547cb7fa32925b3b7100448bf18f98ea4d5f8bc4b9d28ae005a805d
   languageName: node
   linkType: hard
 

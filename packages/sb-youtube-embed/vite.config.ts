@@ -11,7 +11,13 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/setupTests.ts'],
   },
-  plugins: [vue(), cssInjectedByJsPlugin(), ...plugins],
+  plugins: [vue({
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => ['lite-youtube'].includes(tag),
+      }
+    }
+  }), cssInjectedByJsPlugin(), ...plugins],
   build: {
     rollupOptions: {
       output: {

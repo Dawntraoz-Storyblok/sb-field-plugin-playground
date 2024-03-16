@@ -11,7 +11,9 @@
     "deploy": "yarn build && npx @storyblok/field-plugin-cli@latest deploy --dotEnvPath '../../.env'"
   },
   "dependencies": {
-    "@storyblok/field-plugin": "1.1.1",
+    "@storyblok/design-system": "^3.25.0",
+    "@storyblok/field-plugin": "^1.1.2",
+    "lite-youtube-embed": "^0.3.2",
     "vue": "^3.2.47"
   },
   "devDependencies": {
