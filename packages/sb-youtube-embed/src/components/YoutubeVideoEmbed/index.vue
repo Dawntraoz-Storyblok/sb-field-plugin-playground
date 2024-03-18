@@ -4,14 +4,11 @@ import { useFieldPlugin } from '@storyblok/field-plugin/vue3'
 import type { Video } from '../../types'
 import VideoEmbed from './VideoEmbed.vue'
 
-const pluginName = 'sb-youtube-embed'
 const plugin = useFieldPlugin()
 
-const youtubePluginData = computed<Video>(() => {
-  const content = plugin.data?.content as Video
-  return typeof content === 'object'
-    ? content
-    : { plugin: pluginName, rawURL: '' }
+const youtubePluginData = computed<Video | null>(() => {
+  const content = plugin.data?.content as Video | null
+  return typeof content === 'object' ? content : { rawURL: '' }
 })
 
 const extractYouTubeVideoId = (url: string) => {
@@ -38,17 +35,17 @@ const setYoutubePluginData = (url: string) => {
       class="sb-mb-3 font-14"
       placeholder="Add your YouTube video URL"
       :error="
-        youtubePluginData.rawURL !== '' &&
-        extractYouTubeVideoId(youtubePluginData.rawURL) === ''
+        !!youtubePluginData?.rawURL &&
+        extractYouTubeVideoId(youtubePluginData?.rawURL ?? '') === ''
       "
       error-message="The YouTube link doesn't seem valid"
-      :nativeValue="youtubePluginData.rawURL"
-      :modelValue="youtubePluginData.rawURL"
+      :nativeValue="youtubePluginData?.rawURL"
+      :modelValue="youtubePluginData?.rawURL"
       @update:modelValue="setYoutubePluginData($event)"
     />
     <VideoEmbed
-      v-if="youtubePluginData.id"
-      :video-id="youtubePluginData.id"
+      v-if="youtubePluginData?.id"
+      :video-id="youtubePluginData?.id"
       data-testid="video-embedder"
     />
   </div>
