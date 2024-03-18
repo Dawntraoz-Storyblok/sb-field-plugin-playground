@@ -1,6 +1,6 @@
 export type Video = {
     plugin: string
     id?: string
-    rawURL?: string
+    rawURL: string
     cover?: string
 }

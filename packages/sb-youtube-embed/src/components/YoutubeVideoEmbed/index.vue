@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
+import { computed } from 'vue'
 import { useFieldPlugin } from '@storyblok/field-plugin/vue3'
 import type { Video } from '../../types'
 import VideoEmbed from './VideoEmbed.vue'
@@ -9,10 +9,12 @@ const plugin = useFieldPlugin()
 
 const youtubePluginData = computed<Video>(() => {
   const content = plugin.data?.content as Video
-  return typeof content === 'object' ? content : { plugin: pluginName }
+  return typeof content === 'object'
+    ? content
+    : { plugin: pluginName, rawURL: '' }
 })
 
-function extractYouTubeVideoId(url: string) {
+const extractYouTubeVideoId = (url: string) => {
   const regex =
     /(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^?&"'>]+)/
   const matches = url.match(regex)
@@ -36,8 +38,8 @@ const setYoutubePluginData = (url: string) => {
       class="sb-mb-3 font-14"
       placeholder="Add your YouTube video URL"
       :error="
-        youtubePluginData.rawURL &&
-        extractYouTubeVideoId(youtubePluginData.rawURL ?? '') === ''
+        youtubePluginData.rawURL !== '' &&
+        extractYouTubeVideoId(youtubePluginData.rawURL) === ''
       "
       error-message="The YouTube link doesn't seem valid"
       :nativeValue="youtubePluginData.rawURL"
