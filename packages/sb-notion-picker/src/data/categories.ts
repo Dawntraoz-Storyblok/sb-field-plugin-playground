@@ -4,30 +4,12 @@ export type MockCategory = {
 
 export const categories: MockCategory[] = [
   {
-    name: 'Kitchen',
+    name: 'Season 0',
   },
   {
-    name: 'Food',
+    name: 'Season 1',
   },
   {
-    name: 'Beverages',
-  },
-  {
-    name: 'Electronics',
-  },
-  {
-    name: 'Clothing',
-  },
-  {
-    name: 'Books',
-  },
-  {
-    name: 'Home Decor',
-  },
-  {
-    name: 'Literature',
-  },
-  {
-    name: 'Hygiene',
+    name: 'Season 2',
   },
 ]

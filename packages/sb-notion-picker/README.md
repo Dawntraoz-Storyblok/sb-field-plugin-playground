@@ -1,4 +1,4 @@
-# Picker Starter
+# Notion Picker
 
 A starter project for building e-commerce [field plugins](https://www.storyblok.com/docs/plugins/field-plugins/introduction) and other “picker” field plugins – for example, integrations with digital asset management (DAM) systems.
 
@@ -13,8 +13,8 @@ In the example below you can have a glimpse of what this file looks like and its
 ```js
 export default defineConfig((options) => {
   return {
-    title: 'Picker Starter', //(1) modal's title
-    icon: StoryblokIcon, //(2) modal's icon
+    title: 'Notion Picker', //(1) modal's title
+    icon: NotionIcon, //(2) modal's icon
     validateOptions: () => {
       //(3) optional function responsible for validating the plugin's options and showing a warning box in case of failure.
       const { limit } = options

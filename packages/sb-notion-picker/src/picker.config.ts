@@ -1,11 +1,11 @@
 import { categories, items } from '@/data'
 import { defineConfig, matchCategories, matchSearchTerm } from '@/core'
-import { StoryblokIcon } from './components'
+import { NotionIcon } from './components'
 import { getPage } from './utils'
 
 export default defineConfig((options) => ({
-  title: 'Picker Starter',
-  icon: StoryblokIcon,
+  title: 'Notion Picker',
+  icon: NotionIcon,
   validateOptions: () => {
     const { limit } = options
 
@@ -41,7 +41,7 @@ export default defineConfig((options) => ({
       getFilters: async () => [
         {
           type: 'multi',
-          label: 'Categories',
+          label: 'Seasons',
           name: 'categoryMulti',
           defaultValue: [],
           options: categories.map((category) => ({
