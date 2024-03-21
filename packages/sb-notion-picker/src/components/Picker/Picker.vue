@@ -71,7 +71,7 @@ export default {
         : numberFromString(this.unvalidatedOptions.limit)
     },
     items() {
-      return this.value.items ?? []
+      return this.value?.items ?? []
     },
     validationResult() {
       try {

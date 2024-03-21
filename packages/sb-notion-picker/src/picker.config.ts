@@ -27,7 +27,7 @@ export default defineConfig((options) => ({
       name: 'items',
       label: 'Items',
       query: async ({ searchTerm, page, perPage, filterSelection }) => {
-        const filteredItems = items
+        const filteredItems = (await items(options['notion-serverless-url']))
           .filter(matchCategories(filterSelection['categoryMulti'] as string[]))
           .filter(matchSearchTerm(searchTerm))
 

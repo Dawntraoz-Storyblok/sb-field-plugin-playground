@@ -1,7 +1,6 @@
 import { BasketItem } from '@/core'
-import { compareName, capitalizeWord } from '@/utils'
+import { compareName } from '@/utils'
 import { notionServerlessUrl } from '@/settings'
-import { useFieldPlugin } from '@storyblok/field-plugin/vue3'
 
 export type TempItem = {
   id: number
@@ -11,9 +10,8 @@ export type TempItem = {
   category: string | undefined
 }
 
-const getNotionEpisodes = async () => {
-  const plugin = useFieldPlugin()
-  const notionEndpoint = plugin.data?.options['notion-serverless-url'] ?? notionServerlessUrl
+const getNotionEpisodes = async (optionNotionURL: string) => {
+  const notionEndpoint = optionNotionURL ?? notionServerlessUrl
   const episodesServerLess = await fetch(notionEndpoint).then((res) => res.json())
 
   return Object.values(episodesServerLess).reduce(
@@ -25,7 +23,7 @@ const getNotionEpisodes = async () => {
 }
 
 // Temporary object, just so that we can save some lines of code
-export const tmpAssets: TempItem[] = await getNotionEpisodes();
+export const tmpAssets = async (optionNotionURL: string): Promise<TempItem[]> => await getNotionEpisodes(optionNotionURL);
 
 export type Item = BasketItem<'item'> & {
   sku: string | undefined
@@ -35,18 +33,18 @@ export type MockItem = Item & {
   category: string | undefined
 }
 
-export const items: MockItem[] = tmpAssets
-  .map((mockItems) => {
-    const { name, filename, id, description } = mockItems
+export const items = async (optionNotionURL: string): Promise<MockItem[]> => (await tmpAssets(optionNotionURL)
+).map((mockItems) => {
+  const { name, filename, id, description } = mockItems
 
-    return {
-      type: 'item',
-      id: `${id}`,
-      name: name,
-      image: filename,
-      sku: `sku-${id}`,
-      description,
-      category: mockItems.category,
-    } as MockItem
-  })
+  return {
+    type: 'item',
+    id: `${id}`,
+    name: name,
+    image: filename,
+    sku: `sku-${id}`,
+    description,
+    category: mockItems.category,
+  } as MockItem
+})
   .sort(compareName)
